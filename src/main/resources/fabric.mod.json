@@ -1,0 +1,31 @@
+{
+	"schemaVersion": 1,
+	"id": "important-bug-fix",
+	"version": "26.2",
+	"name": "Help Mojang clear their butt",
+	"description": "Fix some important bugs:\n  Fix Dragon cannot knock back player successfully: MC-105770,\n  Fix Dragon y velocity: MC-197201, MC271336, MC-272431,\n  Dragon and Fireball Similar to Bedrock Edition,\n  Make the shepherd's house in snowy village can spawn: MC-152449, MC-152775, MC-152804, MC-152857, MC-152975, MC-170550, ...(There aren't enough people to stand here. For more, refer bugs.mojang.com/browse/MC-170550 please.)",
+	"authors": ["FallingUser"],
+	"contributors": ["Primitive EnderDragon"],
+	"contact": {
+		"homepage": "https://github.com/FallingUser/important-bug-fix",
+		"issues": "https://github.com/FallingUser/important-bug-fix/issues"
+	},
+	"license": "AGPL-3.0-only",
+	"icon": "assets/importantbugfix/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"primitiveenderdragon.briefrelease.importantbugfix.ImportantBugfix"
+		],
+		"client": []
+	},
+	"mixins": [
+		"importantbugfix.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.18.6",
+		"minecraft": ">=26.1.1",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
