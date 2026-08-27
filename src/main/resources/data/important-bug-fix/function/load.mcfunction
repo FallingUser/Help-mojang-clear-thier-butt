@@ -1,0 +1,3 @@
+schedule function important-bug-fix:load 10t
+execute at @e[type=minecraft:area_effect_cloud,nbt={RadiusPerTick:0f}] unless entity @e[dx=0.001,dz=0.001,type=minecraft:area_effect_cloud,nbt={Duration:2400}] run summon minecraft:area_effect_cloud ~ ~ ~ {ReapplicationDelay:20,Radius:5f,DurationOnUse:0,Duration:2400,RadiusPerTick:0f,custom_particle:{power:1f,type:"minecraft:dragon_breath"},potion_contents:{custom_effects:[{show_icon:1b,id:"minecraft:instant_damage"}]},RadiusOnUse:0f,potion_duration_scale:0.25f,WaitTime:20}
+execute as @e[type=minecraft:area_effect_cloud,nbt={custom_particle:{type:"minecraft:dragon_breath"}}] run data modify entity @s Owner set from entity @n[type=minecraft:ender_dragon] UUID
