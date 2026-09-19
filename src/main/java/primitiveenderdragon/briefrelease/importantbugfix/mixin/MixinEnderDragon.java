@@ -23,7 +23,7 @@ public class MixinEnderDragon {
     @Inject(method = "knockBack", at = @At("HEAD"))
     private void preventWingPushWhenSitting(ServerLevel serverLevel, List<Entity> entities, CallbackInfo ci) {
         for(Entity entity : entities) {
-            entity.hurtMarked = true;
+            entity.syncVelocity = true;
         }
     }
 }
